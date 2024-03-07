@@ -19,7 +19,8 @@
  .hamburger-options.open-burger{
     opacity: 1;
     width: fit-content;
-    position: relative;
+    position: absolute;
+    background-color: white;
         /* this is responsible for the way in */
         transition-timing-function: ease-out;
         transition: 0.5s;
@@ -42,7 +43,8 @@
 
 .dropdown-options.open-dropdown{
 opacity:1;
-position: relative;
+position: absolute;
+background-color: white;
 z-index: 1;
 /* responsible for pushing in in to view */
 transition-timing-function: ease-out;
@@ -63,7 +65,7 @@ transform: translateY(0%);
     box-sizing: content-box;
     min-width: 300px;
     height: 200px;
-    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
     transform: 1s;
     transform: translateX(0);
 }

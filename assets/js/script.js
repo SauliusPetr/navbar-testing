@@ -18,10 +18,10 @@ function openDropdown() {
 function nextSlide() {
   let imageContainer = document.querySelectorAll(".image-container");
   imageContainer.forEach((image) => {
-    if (image.style.transform == "translateX(-100%)") {
+    if (image.style.transform == "translateX(100%)") {
       image.style.transform = "translateX(0)";
     } else {
-      image.style.transform = "translateX(100%)";
+      image.style.transform = "translateX(-100%)";
     }
   });
 }
@@ -29,10 +29,10 @@ function nextSlide() {
 function previousSlide() {
   let imageContainer = document.querySelectorAll(".image-container");
   imageContainer.forEach((image) => {
-    if (image.style.transform == "translateX(100%)") {
+    if (image.style.transform == "translateX(-100%)") {
       image.style.transform = "translateX(0)";
     } else {
-      image.style.transform = "translateX(-100%)";
+      image.style.transform = "translateX(100%)";
     }
   });
 }
