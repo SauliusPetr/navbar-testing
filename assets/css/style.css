@@ -1,24 +1,83 @@
 *{
-    border: 1px solid red;
-    padding: 2px;
+    padding:4px;
     margin: 4px;
+    border: 2px solid red;
+    box-sizing: border-box;
+}
+.navigation .hamburger-options{
+    position: absolute;
+    opacity: 0;
+        /* this is responsible for the way out */
+        transition-timing-function: ease-in;
+        transition: 0.3s;
+        /* pushes out of view */
+        transform: translateX(-50%);
+}
+.navigation .hamburger-options li:hover{
+    color: tomato;
+}
+ .hamburger-options.open-burger{
+    opacity: 1;
+    width: fit-content;
+    position: relative;
+        /* this is responsible for the way in */
+        transition-timing-function: ease-out;
+        transition: 0.5s;
+        /* pushes into view */
+        transform: translateX(0%);
+}
+.navigation .dropdown-options{
+    border-radius: 5%;
+    width: fit-content;
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+    
+    /* this is responsible for the way out */
+    transition-timing-function: ease-in;
+    transition: 0.3s;
+    /* pushes out of view */
+    transform: translateY(-50%);
 }
 
-.hamburger-navigation{
+.dropdown-options.open-dropdown{
+opacity:1;
+position: relative;
+z-index: 1;
+/* responsible for pushing in in to view */
+transition-timing-function: ease-out;
+transition: 0.5s;
+transform: translateY(0%);
+}
+
+.image-slider-container{
+    display: flex;
+    justify-content:center ;
+}
+.view-frame{
+    display: flex;
+    width: 400px;
+    justify-content: center;
+}
+.image-container{
+    box-sizing: content-box;
+    min-width: 300px;
+    height: 200px;
+    transition-timing-function: ease-out;
+    transform: 1s;
+    transform: translateX(0);
+}
+.previuos{
     position: relative;
+    left: 19em;
+    background-color: blue;
+    opacity: 0.5;
+    z-index: 1;
 }
-.hamburger-navigation .options{
-    position: absolute;
-    left: -2em;
-    opacity: 0;
-    transition: left 1s,opacity 0.3s;
-}
- .options.open-burger{
-    left:1em;
-    opacity: 1;
+.next{
     position: relative;
-}
- .options.close-burger{
-    left: -2em;
-    opacity: 0;
+    left: -19em;
+    background-color: blue;
+    opacity: 0.5;
+    z-index: 1;
 }
